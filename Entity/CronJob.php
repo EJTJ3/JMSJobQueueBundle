@@ -11,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 class CronJob
 {
     #[ORM\Id]
+    #[ORM\GeneratedValue]
     private $id;
 
     #[ORM\Column(type: Types::STRING, length: 200, unique: true)]
