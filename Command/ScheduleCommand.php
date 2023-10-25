@@ -32,7 +32,7 @@ final class ScheduleCommand extends Command
         $this->cronCommands = $cronCommands;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->addOption('max-runtime', null, InputOption::VALUE_REQUIRED, 'The maximum runtime of this command.', 3600)
