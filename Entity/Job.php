@@ -23,7 +23,6 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\JobQueueBundle\Exception\InvalidStateTransitionException;
 use JMS\JobQueueBundle\Exception\LogicException;
-use Symfony\Component\Debug\Exception\FlattenException;
 
 /**
  *
@@ -580,11 +579,6 @@ class Job
     public function getCheckedAt()
     {
         return $this->checkedAt;
-    }
-
-    public function setStackTrace(FlattenException $ex)
-    {
-        $this->stackTrace = $ex;
     }
 
     public function getStackTrace()
